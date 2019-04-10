@@ -1,0 +1,13 @@
+﻿@model List<Dishes>
+<div class="page-title">Welcome to CRUDelicious</div>
+
+<div class="header">
+    <p class="title">Check out some recent dishes!</p>
+    <div class="btn-link"> <a href="new" class="btn btn-primary">Add a Dish</a> </div>
+</div>
+
+@foreach(var dishes in Model)
+{
+    <p class="content-list"> <a href="/@dishes.DishId"> @dishes.Name </a> by @dishes.Chef </p>
+}
+

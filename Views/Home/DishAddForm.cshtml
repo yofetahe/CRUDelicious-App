@@ -1,0 +1,49 @@
+@model Dishes
+<div class="header">
+    <p class="title">Add a new Dish!</p>
+</div>
+
+<div class="breadcrum">
+    <a href="/">Home</a>
+</div>
+
+<form action="AddDishes" method="post">
+    <div class="form-group">
+        <span class="errorMessage" asp-validation-for="Name"></span>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <span class="errorMessage" asp-validation-for="Chef"></span>
+        <label asp-for="Chef"></label>
+        <input asp-for="Chef" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <span class="errorMessage" asp-validation-for="Tastiness"></span>
+        <label asp-for="Tastiness"></label>        
+        <select asp-for="Tastiness" class="form-control">
+            <option value="">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <span class="errorMessage" asp-validation-for="Calories"></span>
+        <label asp-for="Calories"></label>
+        <input asp-for="Calories" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <span class="errorMessage" asp-validation-for="Description"></span>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" cols="30" rows="5" class="form-control"></textarea>
+    </div>
+
+    <button class="btn btn-primary">Add Dish</button>
+</form>

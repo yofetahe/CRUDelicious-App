@@ -1,0 +1,26 @@
+@model Dishes
+
+<div class="breadcrum">
+    <a href="/">Home</a>
+</div>
+
+<div class="header-title">
+    <p class="title">@Model.Name</p>
+    <p> @Model.Chef </p>
+</div>
+
+<hr>
+
+<div>
+    <p>@Model.Description</p>
+    <p>Calories: @Model.Calories</p>
+    <p>Tasiness: @Model.Tastiness</p>
+</div>
+
+<div>
+    <a href="/delete/@Model.DishId" class="btn btn-primary">Delete</a>
+    <a href="/edit/@Model.DishId" class="btn btn-primary">Edit</a>
+</div>
+
+
+
